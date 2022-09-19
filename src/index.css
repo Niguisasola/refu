@@ -19,6 +19,7 @@ code {
 
 .bg-img {
   max-height: 83px;
+  width: 100%;
   background-position: center;
   background-repeat: round;
   background-size: cover;

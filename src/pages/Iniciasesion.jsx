@@ -1,14 +1,14 @@
 import React from 'react';
 import Header from '../components/Header';
-import RestroomInfo from '../components/RestroomInfo';
+import Login from '../components/Login';
 
-function Add() {
+function Iniciasesion() {
   return (
     <>
     <Header/>
-    <RestroomInfo/>
+    <Login/>
     </>
   )
 }
 
-export default Add
+export default Iniciasesion

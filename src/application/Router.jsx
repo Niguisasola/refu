@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Inicio from '../pages/Inicio';
 import Home from '../pages/Home';
-import Login from '../pages/LogIn';
+import Iniciasesion from '../pages/Iniciasesion';
 import Register from '../pages/Register';
 import Detail from '../pages/Detail';
 import Ranking from '../pages/Ranking';
@@ -16,7 +16,7 @@ function Router() {
     <Routes>
       <Route path='/' element={<Inicio/>}/>
       <Route path='/home' element={<Home/>}/>
-      <Route path='/login' element={<Login/>}/>
+      <Route path='/login' element={<Iniciasesion/>}/>
       <Route path='/register' element={<Register/>}/>
       <Route path='/detail' element={<Detail/>}/>
       <Route path='/add' element={<Add/>}/>
