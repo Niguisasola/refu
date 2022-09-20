@@ -1,31 +1,23 @@
+
 import React, { useState, useEffect } from 'react';
-import { GoogleMap, InfoWindow, Marker } from '@react-google-maps/api';
+import GoogleMaps from "simple-react-google-maps";
 
 
-function Mapa() {
-    const [restrooms, setRestrooms] = useState([])
 
-    const URL = 'https://www.refugerestrooms.org/api/v1/restrooms/search?page=1&per_page=100&offset=0&query=%22spain%22'
-
-    useEffect(() => {
-        fetch(URL).then(res => res.json()).then(res => setRestrooms(res))
-    }, [])
-
-    console.log(restrooms)
+export default function Mapa({markers}) {
     return (
-        <GoogleMap
-            mapContainerStyle={{ width: "100vw", height: "100vh" }}
-            defaultZoom={8}
-            defaultCenter={{lat:3.345,lng:-150.644}}
-        >
-            {restrooms.map(({ id, name, latitude, longitude }) => (
-                <Marker
-                    key={id}
-                    position={{ lat: latitude, lng: longitude }}
-                >
-                </Marker>
-            ))}
-            </GoogleMap>
+        <div className=' d-inline-flex justify-content-center mt-2'>
+            
+                <GoogleMaps
+                    apiKey={"AIzaSyCnMxDM5mzZuwHEsYeb1b_CcA1Pq1nxigE"}
+                    key={1}
+                    style={{ height: "400px", width: "500px" }}
+                    zoom={12}
+                    center={{lat: 37.4224764, lng: -122.0842499}}
+                    markers={markers} //optional
+                    // center={{ lat: 39.4863243, lng: -0.3602353 }}
+                    // markers={restrooms.map((restroom) => ({ lat: restroom.latitude, lng: restroom.longitude}))}
+                />
+        </div>
     );
 }
-export default Mapa;

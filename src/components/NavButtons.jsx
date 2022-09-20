@@ -5,7 +5,7 @@ import add from '../assets/img/add.png';
 import favorites from '../assets/img/favorites.png';
 import listed from '../assets/img/list.png'
 
-function Home() {
+function NavButtons() {
     return (
         <div className="d-flex justify-content-evenly gap-5 mt-3">
             <Link to='/add'><button className='btn btn-white border-dark' type="submit"><img className='bg-img' src={add} alt='add' /></button></Link>
@@ -16,4 +16,4 @@ function Home() {
     )
 }
 
-export default Home
+export default NavButtons

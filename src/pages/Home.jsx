@@ -1,20 +1,16 @@
 import React from 'react';
+import Mapping from '../components/Mapping';
 import Header from '../components/Header';
-import Home from '../components/Home';
-import Mapa from '../components/Maps';
-import { useLoadScript } from '@react-google-maps/api'
+import NavButtons from '../components/NavButtons';
 
-function Add() {
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyCnMxDM5mzZuwHEsYeb1b_CcA1Pq1nxigE"
-  });
-  return (
-    <>
-      <Header />
-      {isLoaded ? <Mapa /> : null}
-      <Home />
-    </>
-  )
+function Home() {
+    return (
+        <>
+            <Header />
+            <Mapping />
+            <NavButtons />
+        </>
+    )
 }
 
-export default Add
+export default Home
