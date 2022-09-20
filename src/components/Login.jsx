@@ -6,7 +6,7 @@ function Login() {
         email: "admin@admin.com",
         password: "admin123"
     }
-    
+
     const [user, setUser] = useState({ name: "", email: "" });
     const [error, setError] = useState("");
 
@@ -19,27 +19,28 @@ function Login() {
                 name: details.name,
                 email: details.email
             });
-    } else {
-        console.log("Details do no match!");
-        setError("Details do no match!");
-}
+        } else {
+            console.log("Details do no match!");
+            setError("Details do no match!");
+        }
     }
 
-const Logout = () => {
-    setUser({ name: "", email: "" });
-}
+    const Logout = () => {
+        setUser({ name: "", email: "" });
+    }
 
-return (
-    <div className="App">
-        {(user.email != "") ? (
-            <div className="welcome">
-                <h2>Welcome, <span>{user.name}</span></h2>
-                <button onClick={Logout}>Logout</button>
-            </div>
-        ) : (
-            <LoginForm Login={Login} error={error} />
-        )}
-    </div>
-)}
+    return (
+        <div className="App">
+            {(user.email != "") ? (
+                <div className="welcome">
+                    <h2>Welcome, <span>{user.name}</span></h2>
+                    <button onClick={Logout}>Logout</button>
+                </div>
+            ) : (
+                <LoginForm Login={Login} error={error} />
+            )}
+        </div>
+    )
+}
 
 export default Login;

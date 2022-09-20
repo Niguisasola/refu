@@ -11,7 +11,7 @@ function Header() {
           <div className='px-2 flex justify-between'>
             <img className='bg-img' src={navbar} alt='flag' />
             <section className='d-flex justify-content-center mt-4'>
-            <Link to='/'><img className='w-50 ' src={logo} alt='logo' /></Link>
+              <Link to='/'><img className='w-50 ' src={logo} alt='logo' /></Link>
             </section>
           </div>
         </div>

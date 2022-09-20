@@ -1,14 +1,18 @@
 import React from 'react';
 import Header from '../components/Header';
 import Home from '../components/Home';
-import Maps from '../components/Maps';
+import Mapa from '../components/Maps';
+import { useLoadScript } from '@react-google-maps/api'
 
 function Add() {
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: "AIzaSyCnMxDM5mzZuwHEsYeb1b_CcA1Pq1nxigE"
+  });
   return (
     <>
-    <Header/>
-    <Maps/>
-    <Home/>
+      <Header />
+      {isLoaded ? <Mapa /> : null}
+      <Home />
     </>
   )
 }

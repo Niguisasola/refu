@@ -8,21 +8,23 @@ import Detail from '../pages/Detail';
 import Ranking from '../pages/Ranking';
 import Favorites from '../pages/Favorites';
 import Add from '../pages/Add';
+import Listed from '../pages/Listed';
 
 
 function Router() {
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Inicio/>}/>
-      <Route path='/home' element={<Home/>}/>
-      <Route path='/login' element={<Iniciasesion/>}/>
-      <Route path='/register' element={<Register/>}/>
-      <Route path='/detail' element={<Detail/>}/>
-      <Route path='/add' element={<Add/>}/>
-      <Route path='/ranking' element={<Ranking/>}/>
-      <Route path='/favorites' element={<Favorites/>}/>
-    </Routes>
+      <Routes>
+        <Route path='/' element={<Inicio />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/login' element={<Iniciasesion />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/detail' element={<Detail />} />
+        <Route path='/listed' element={<Listed />} />
+        <Route path='/add' element={<Add />} />
+        <Route path='/ranking' element={<Ranking />} />
+        <Route path='/favorites' element={<Favorites />} />
+      </Routes>
     </BrowserRouter>
   )
 }

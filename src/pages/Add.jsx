@@ -5,8 +5,8 @@ import RestroomInfo from '../components/RestroomInfo';
 function Add() {
   return (
     <>
-    <Header/>
-    <RestroomInfo/>
+      <Header />
+      <RestroomInfo />
     </>
   )
 }

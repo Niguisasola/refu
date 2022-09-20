@@ -5,8 +5,8 @@ import Login from '../components/Login';
 function Iniciasesion() {
   return (
     <>
-    <Header/>
-    <Login/>
+      <Header />
+      <Login />
     </>
   )
 }
