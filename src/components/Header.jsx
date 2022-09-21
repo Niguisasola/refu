@@ -7,13 +7,11 @@ function Header() {
   return (
     <>
       <header>
-        <div className='w-screen h-[80px] z-10 fixed drop-shadlow-lg'>
-          <div className='px-2 flex justify-between'>
-            <img className='bg-img' src={navbar} alt='flag' />
-            <section className='d-flex justify-content-center mt-4'>
-              <Link to='/'><img className='w-50 ' src={logo} alt='logo' /></Link>
-            </section>
-          </div>
+        <div className='justify-content-center'>
+          <img className='bg-img opacity-75' src={navbar} alt='flag' />
+        </div>
+        <div className='d-flex justify-content-center'>
+          <Link to='/'><img className='w-75 mt-4 m-9' src={logo} alt='logo' /></Link>
         </div>
       </header>
     </>

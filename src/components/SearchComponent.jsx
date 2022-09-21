@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 const SearchComponent = () => {
-    const [users, setUsers] = useState([])
+    const [restrooms, setRestrooms] = useState([])
     const [search, setSearch] = useState("")
 
     const URL = 'https://www.refugerestrooms.org/api/v1/restrooms/search?page=1&per_page=100&offset=0&query=%22spain%22'
@@ -10,33 +10,33 @@ const SearchComponent = () => {
         const response = await fetch(URL)
         const data = await response.json()
         console.log(data)
-        setUsers(data)
+        setRestrooms(data)
     }
     useEffect(() => {
         showData()
-        console.log(users)
-    })
+        console.log(restrooms)
+    }, []);
 
 
     return (
         <>
-            <table className='table table-striped table hover mt-5 shadow-lg'>
-                <thead>
-                    <t className='bc-violet'>
-                        <th>NAME</th>
-                        <th>USER NAME</th>
+            <div className='table table-striped hover mt-5 shadow-lg'>
+                <div>
+                    <ul className='bc-violet'>
+                        <li>NAME</li>
+                        <li>USER NAME</li>
 
-                    </t>
-                </thead>
-                <tbody>
-                    {users.map((user) => (
-                        <tr key={user.id}>
-                            <td>{user.name}</td>
-                            <td>{user.username}</td>
-                        </tr>
+                    </ul>
+                </div>
+                <div>
+                    {restrooms.map((restroom) => (
+                        <ul key={restroom.id}>
+                            <li>{restroom.name}</li>
+                            <li>{restroom.username}</li>
+                        </ul>
                     ))}
-                </tbody>
-            </table>
+                </div>
+            </div>
         </>
 
     )
