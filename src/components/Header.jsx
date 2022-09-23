@@ -11,7 +11,9 @@ function Header() {
           <img className='bg-img opacity-75' src={navbar} alt='flag' />
         </div>
         <div className='d-flex justify-content-center'>
-          <Link to='/'><img className='w-75 mt-4 m-9' src={logo} alt='logo' /></Link>
+          <div>
+            <Link to='/'><img className='w-75 mt-4 m-9' src={logo} alt='logo' /></Link>
+          </div>
         </div>
       </header>
     </>

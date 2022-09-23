@@ -8,12 +8,14 @@ const Rate = ({ count, rating, color, onRating }) => {
             .fill(0)
             .map((_, i) => i + 1)
             .map(idx => {
+                <h1>te</h1>
+/* 
                 <FontAwesomeIcon
                     key={idx}
                     className="cursor-pointer"
                     icon="star"
                     onClick={() => onRating(idx)}
-                />
+                /> */
             });
     }, [count, rating])
 
