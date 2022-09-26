@@ -7,13 +7,11 @@ function Header() {
   return (
     <>
       <header>
-        <div className='justify-content-center'>
           <img className='bg-img opacity-75' src={navbar} alt='flag' />
-        </div>
-        <div className='d-flex justify-content-center'>
-          <div>
-            <Link to='/'><img className='w-75 mt-4 m-9' src={logo} alt='logo' /></Link>
-          </div>
+        <div className='d-flex justify-items-center mt-4'>
+
+          <Link to='/'><img className='w-50' src={logo} alt='logo' /></Link>
+      
         </div>
       </header>
     </>

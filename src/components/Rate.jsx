@@ -1,45 +1,97 @@
-import React, { useMemo } from 'react';
-import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from "react";
+import { FaStar } from "react-icons/fa";
 
-const Rate = ({ count, rating, color, onRating }) => {
-    const starRating = useMemo(() => {
-        return Array(count)
-            .fill(0)
-            .map((_, i) => i + 1)
-            .map(idx => {
-                <h1>te</h1>
-/* 
-                <FontAwesomeIcon
-                    key={idx}
-                    className="cursor-pointer"
-                    icon="star"
-                    onClick={() => onRating(idx)}
-                /> */
-            });
-    }, [count, rating])
+const colors = {
+    orange: "#FFBA5A",
+    grey: "#a9a9a9"
+    
+};
 
-    return (
-        <div>{starRating}</div>
-    )
-}
+function Rate() {
+  const [currentValue, setCurrentValue] = useState(0);
+  const [hoverValue, setHoverValue] = useState(undefined);
+  const stars = Array(5).fill(0)
 
-Rate.prototype = {
-    count: PropTypes.number,
-    rating: PropTypes.number,
-    onChange: PropTypes.func,
-    color: {
-        filled: PropTypes.string,
-        unfilled: PropTypes.string
-    }
-}
-Rate.defaultProps = {
-    count: 5,
-    rating: 0,
-    color: {
-        filled: '#f5eb3b',
-        unfilled: '#DCDCDC'
-    }
-}
+  const handleClick = value => {
+    setCurrentValue(value)
+  }
+
+  const handleMouseOver = newHoverValue => {
+    setHoverValue(newHoverValue)
+  };
+
+  const handleMouseLeave = () => {
+    setHoverValue(undefined)
+  }
+
+
+  return (
+    <div style={styles.container}>
+      <h2> Valora tu experiencia </h2>
+      <div style={styles.stars}>
+        {stars.map((_, index) => {
+          return (
+            <FaStar
+              key={index}
+              size={24}
+              onClick={() => handleClick(index + 1)}
+              onMouseOver={() => handleMouseOver(index + 1)}
+              onMouseLeave={handleMouseLeave}
+              color={(hoverValue || currentValue) > index ? colors.orange : colors.grey}
+              style={{
+                marginRight: 10,
+                cursor: "pointer"
+              }}
+            />
+          )
+        })}
+      </div>
+      <textarea
+        placeholder="Quieres añadir algún comentario?"
+        style={styles.textarea}
+      />
+
+      <button
+        style={styles.button}
+      >
+        Enviar
+      </button>
+      
+    </div>
+  );
+};
+
+
+const styles = {
+  container: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
+  },
+  stars: {
+    display: "flex",
+    flexDirection: "row",
+  },
+  textarea: {
+    border: "1px solid #a9a9a9",
+    borderRadius: 5,
+    padding: 10,
+    margin: "20px 0",
+    minHeight: 100,
+    width: 300
+  },
+  button: {
+    border: "1px solid #a9a9a9",
+    borderRadius: 50,
+    background: "#000000",
+    color: "#ffffff",
+    width: 200,
+    padding: 10,
+  }
+
+};
+
+
+
 
 export default Rate;
