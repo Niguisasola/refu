@@ -16,7 +16,6 @@ function Titles() {
                         <p className="card-text text-center mr-3 ml-8 mt-2 fs-5 text lh-1 ">Somos concientes que vivir en una sociedad violenta e intolerante a la diversidad puede ser agobiante y hasta peligroso. Por eso hermos ideado refurestroom para que encuentres aquí lo que estás buscando.</p>
                         <div className='d-flex justify-content-evenly gap-5 mt-5'>
                             <Link to='/login'><button className='btn btn-light rounded-5 border-dark' type="submit"><p className='mx-5 mt-3'>LOGIN</p></button></Link>
-                        <Link to='/register'><button className='btn btn-light rounded-5 border-dark' type="submit"><p className='mx-5 mt-3'>REGISTER</p></button></Link>
                     </div>
                     </div>
                 </div>

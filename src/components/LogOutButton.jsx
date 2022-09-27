@@ -5,9 +5,11 @@ const LogOutButton = () => {
 
     return (
         isAuthenticated && (
-            <button onClick={() => logout()}>
-                Sign Out
+            <div className='d-flex justify-content-center'>
+            <button className='btn btn-light rounded-5 border-dark mt-5' onClick={() => logout()}>
+                Cerrar Sesión
             </button>
+            </div>
         )
     )
 }

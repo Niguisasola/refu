@@ -5,9 +5,11 @@ const LoginButton = () => {
 
     return (
         !isAuthenticated && (
-            <button onClick={() => loginWithRedirect()}>
-                Sign In
+            <div className='d-flex justify-content-center'>
+            <button className='btn btn-light rounded-5 border-dark mt-5' onClick={() => loginWithRedirect()}>
+                Iniciar Sesión 
             </button>
+            </div>
         )
     )
 }

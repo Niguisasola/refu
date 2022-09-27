@@ -7,8 +7,11 @@ function LogInOutProfile() {
   const { isLoading, error } = useAuth0();
 
   return (
-    <main className="column">
-      <h1>Iniciar Sesión</h1>
+    <main>
+      <div className="d-flex justify-content-center">
+      <h3 className="mt-5">Click aquí si quieres ...</h3>
+      </div>
+      <div>
       {error && <p>Authentication Error</p>}
       {!error && isLoading && <p>Loading...</p>}
       {!error && !isLoading && (
@@ -18,6 +21,7 @@ function LogInOutProfile() {
           <Profile />
         </>
       )}
+      </div>
     </main>
   );
 }
