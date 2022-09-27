@@ -7,12 +7,12 @@ function Header() {
   return (
     <>
       <header>
+        <div className='justify-content-center'>
           <img className='bg-img opacity-75' src={navbar} alt='flag' />
-        <div className='d-flex justify-items-center mt-4'>
-
-          <Link to='/'><img className='w-50' src={logo} alt='logo' /></Link>
-      
         </div>
+        <Link className='d-flex justify-content-center' to='/'>
+          <img className='w-50 ml-auto mr-auto' src={logo} alt='logo' />
+        </Link>
       </header>
     </>
   )

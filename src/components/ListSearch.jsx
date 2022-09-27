@@ -4,7 +4,7 @@ import SearchComponent from './SearchComponent';
 function ListSearch() {
   return (
     <div className='container-fluid'>
-        <h1 className='text-center'>React Search</h1>
+        <h1 className='text-center'>Encuentra aquí tu Servicio</h1>
         <SearchComponent/>
     </div>
   )

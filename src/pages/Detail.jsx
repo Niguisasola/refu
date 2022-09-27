@@ -1,10 +1,9 @@
 import React from 'react';
 import Header from '../components/Header';
 import InfoDetail from '../components/InfoDetail';
-import RestroomInfo from '../components/RestroomInfo';
 
 
-function Add() {
+function Detail() {
   return (
     <>
       <Header />
@@ -13,4 +12,4 @@ function Add() {
   )
 }
 
-export default Add
+export default Detail

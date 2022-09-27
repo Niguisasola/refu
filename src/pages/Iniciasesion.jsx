@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from '../components/Header';
-import Login from '../components/Login';
+import LogInOutProfile from '../components/LogInOutProfile';
 
 function Iniciasesion() {
   return (
     <>
       <Header />
-      <Login />
+      <LogInOutProfile />
     </>
   )
 }
