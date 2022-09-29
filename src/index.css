@@ -16,19 +16,49 @@
   position: relative;
 }
 
+@media (max-width: 1024px) {
+  .logo {
+    width: 300px;
+    display: flex;
+    justify-self: center;
+  }
+}
 
 @media (min-width: 1024px) {
   .logo {
-    width: 600px;
+    width: 300px;
     display: flex;
     justify-self: center;
+    margin: 0;
+    padding: 0;
   }
 }
 
 @media (min-width: 1024px) {
   .cardmedia {
-    width: 600px;
+    width: 100vw;
     display: flex;
+    flex-direction: columns;
     justify-self: center;
   }
 }
+
+@media (max-width: 1024px) {
+  .mapgoogle {
+    height: "45vh";
+    width: "100vw";
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+
+  }
+}
+
+@media (max-width: 1024px) {
+  .buttons {
+    margin-top: -10;
+
+  }
+}
+
+ 

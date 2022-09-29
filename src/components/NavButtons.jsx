@@ -8,7 +8,7 @@ import listed from '../assets/img/list.png'
 function NavButtons() {
     return (
         <div>
-        <div className="d-flex justify-content-evenly gap-3 m-3">
+        <div className="buttons d-flex justify-content-evenly gap-3 m-3">
             <Link to='/add'><button className='btn btn-white border-dark rounded-4 opacity-75' type="submit"><img className='bg-img' src={add} alt='add' /></button></Link>
             <Link to='/ranking'><button className='btn btn-white border-dark rounded-4 opacity-75' type="submit"><img className='bg-img' src={ranking} alt='ranking' /></button></Link>
             <Link to='/favorites'><button className='btn btn-white border-dark rounded-4 opacity-75' type="submit"><img className='bg-img' src={favorites} alt='ranking' /></button></Link>

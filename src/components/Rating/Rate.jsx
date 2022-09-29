@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const colors = {
-    orange: "#FFBA5A",
-    grey: "#a9a9a9"
-    
+  orange: "#FFBA5A",
+  grey: "#a9a9a9"
+
 };
 
 function Rate() {
@@ -51,12 +52,12 @@ function Rate() {
         style={styles.textarea}
       />
 
-      <button
+      <Link to='/home'><button
         style={styles.button}
       >
         Enviar
-      </button>
-      
+      </button></Link>
+
     </div>
   );
 };

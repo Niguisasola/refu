@@ -41,7 +41,7 @@ export default function RestroomInfo({ id, name, street, city, state, directions
                 </div>
 
                 <div className="d-flex justify-content-evenly gap-5">
-                    <Link to='/add'><button className='btn btn-dark rounded-lg' type="submit">Añadir</button></Link>
+                    <Link to='/'><button className='btn btn-dark rounded-lg' type="submit">Añadir</button></Link>
                     <Link to='/home'><button className='btn btn-dark rounded-lg' type="submit">Home</button></Link>
                 </div>
             </form>
