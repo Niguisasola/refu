@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/Header';
-import ListSearch from '../components/ListSearch';
+import ListSearch from '../components/List/ListSearch';
 
 function Inicio() {
   return (

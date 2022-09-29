@@ -15,7 +15,7 @@ export default function Mapa({ markers }) {
         <GoogleMaps
                     apiKey={"AIzaSyCnMxDM5mzZuwHEsYeb1b_CcA1Pq1nxigE"}
                     key={1}
-                    style={{ height: "65vh", width: "100vw" }}
+                    style={{ height: "65vh", width: "100vw", margin:"10px"}}
                     zoom={15}
                     center={{ lat: 41.449802616705426, lng: 2.2032907306799157 }}
                     markers={markers} //optional

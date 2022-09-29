@@ -8,11 +8,11 @@ import listed from '../assets/img/list.png'
 function NavButtons() {
     return (
         <div>
-        <div className="d-flex justify-content-evenly gap-5 mt-4">
+        <div className="d-flex justify-content-evenly gap-3 m-3">
             <Link to='/add'><button className='btn btn-white border-dark rounded-4 opacity-75' type="submit"><img className='bg-img' src={add} alt='add' /></button></Link>
             <Link to='/ranking'><button className='btn btn-white border-dark rounded-4 opacity-75' type="submit"><img className='bg-img' src={ranking} alt='ranking' /></button></Link>
             <Link to='/favorites'><button className='btn btn-white border-dark rounded-4 opacity-75' type="submit"><img className='bg-img' src={favorites} alt='ranking' /></button></Link>
-            <Link to='/listed'><button className='btn btn-white border-dark rounded-4 opacity-75' type="submit"><img className='bg-img' src={listed} alt='listed' /></button></Link>
+            <Link to='/listed'><button className='btn btn-white border-dark rounded-4 mr-3' type="submit"><img className='bg-img' src={listed} alt='listed' /></button></Link>
         </div>
         </div>
     )

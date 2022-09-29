@@ -1,6 +1,6 @@
-import LoginButton from "../components/LogInButton";
-import LogoutButton from "../components/LogOutButton";
-import Profile from "../components/Profile";
+import LoginButton from "./LogInButton";
+import LogoutButton from "./LogOutButton";
+import Profile from "./Profile";
 import { useAuth0 } from "@auth0/auth0-react";
 
 function LogInOutProfile() {

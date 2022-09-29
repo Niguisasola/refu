@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom';
 
-export default function RestroomInfo({ name, street, city, state, directions, comments, country }) {
+export default function RestroomInfo({ id, name, street, city, state, directions, comments, country }) {
     return (
         <div className="d-flex justify-content-center">
             <form className="row g-3 w-50 p-3 d-flex justify-content-center">

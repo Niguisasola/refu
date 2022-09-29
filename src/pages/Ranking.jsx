@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/Header';
-import Rate from '../components/Rate';
+import Rate from '../components/Rating/Rate';
 
 function Inicio() {
   return (

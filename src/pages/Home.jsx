@@ -1,5 +1,5 @@
 import React from 'react';
-import Mapping from '../components/Mapping';
+import Mapping from '../components/GoogleMaps/Mapping';
 import Header from '../components/Header';
 import NavButtons from '../components/NavButtons';
 

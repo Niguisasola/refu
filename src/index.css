@@ -3,7 +3,7 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
-*{
+* {
   font-family: 'Space Grotesk';
 }
 
@@ -14,4 +14,21 @@
   background-repeat: round;
   background-size: cover;
   position: relative;
+}
+
+
+@media (min-width: 1024px) {
+  .logo {
+    width: 600px;
+    display: flex;
+    justify-self: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardmedia {
+    width: 600px;
+    display: flex;
+    justify-self: center;
+  }
 }

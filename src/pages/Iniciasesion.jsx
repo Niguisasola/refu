@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import LogInOutProfile from '../components/LogInOutProfile';
+import LogInOutProfile from '../components/IniciarSesion/LogInOutProfile';
 
 function Iniciasesion() {
   return (

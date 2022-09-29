@@ -20,23 +20,26 @@ const SearchComponent = () => {
 
     return (
         <>
-            <div className='table table-striped hover mt-5 shadow-lg'>
-                <div>
-                    <ul className='bc-violet'>
-                        <li>NAME</li>
-                        <li>USER NAME</li>
+            <table className='table table-striped hover mt-5 shadow-lg'>
+                <thead>
+                    <tr className='bc-violet'>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Ciudad</th>
+                        <th scope="col">Estado</th>
 
-                    </ul>
-                </div>
-                <div>
+                    </tr>
+                </thead>
+                <tbody className='table-group-divider'>
                     {restrooms.map((restroom) => (
-                        <ul key={restroom.id}>
-                            <li>{restroom.name}</li>
-                            <li>{restroom.username}</li>
-                        </ul>
+                        <tr>
+                            <th scope="row"key={restroom.id}>{restroom.name}</th>
+                            <td>{restroom.city}</td>
+                            <td>{restroom.state
+}</td>
+                        </tr>
                     ))}
-                </div>
-            </div>
+                </tbody>
+            </table>
         </>
 
     )
